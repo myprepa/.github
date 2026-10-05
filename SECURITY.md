@@ -1,22 +1,22 @@
-# Politique de sécurité
+# Security policy
 
-Cette politique s'applique à tous les dépôts de l'organisation **My Prepa** et aux services
-[myprepa.tn](https://myprepa.tn) et [myprepa.org](https://myprepa.org).
+This policy covers every repository of the **MyPrepa** organisation and the services running at
+[myprepa.tn](https://myprepa.tn), [myprepa.org](https://myprepa.org) and their subdomains.
 
-## Signaler une vulnérabilité
+## Reporting a vulnerability
 
-Merci de **ne pas ouvrir de ticket public** pour une faille de sécurité.
+Please **do not open a public issue** for a security problem.
 
-Écrivez à **contact@myprepa.tn** avec l'objet « Sécurité », en indiquant :
+Email **contact@myprepa.tn** with the subject "Security" and include:
 
-- le service et l'adresse concernés ;
-- les étapes pour reproduire le problème ;
-- l'impact que vous avez constaté.
+- the affected service and URL;
+- steps to reproduce;
+- the impact you observed.
 
-Nous accusons réception dans les meilleurs délais et vous tenons au courant jusqu'à la correction.
+We acknowledge reports as quickly as we can and keep you informed until the issue is fixed.
 
-## Ce que nous vous demandons
+## Please
 
-- N'accédez qu'aux données de votre propre compte, et ne modifiez ni ne supprimez rien.
-- Ne lancez pas de test de charge ni de déni de service.
-- Laissez-nous le temps de corriger avant toute publication.
+- Only access data that belongs to your own account; do not modify or delete anything.
+- Do not run load or denial-of-service tests.
+- Give us reasonable time to fix the issue before any disclosure.

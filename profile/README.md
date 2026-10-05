@@ -1,44 +1,48 @@
 <div align="center">
 
-# My Prepa
+# MyPrepa
 
-**Des outils pensés pour les étudiants tunisiens qui préparent les concours.**
+**The preparation platform for ambitious students — starting with Tunisia's preparatory classes, growing to France and Morocco.**
 
-[myprepa.tn](https://myprepa.tn) · [myprepa.org](https://myprepa.org) · [Statut des services](https://status.myprepa.tn)
+[myprepa.tn](https://myprepa.tn) · [myprepa.org](https://myprepa.org) · [Service status](https://status.myprepa.tn)
 
 </div>
 
 ---
 
-## Nos plateformes
+## What we build
 
-### [myprepa.tn](https://myprepa.tn) — l'espace de travail des classes prépa
+Preparing for a competitive exam means juggling an official programme, years of past papers, scattered
+course material and a lot of uncertainty about where you stand. MyPrepa brings all of it into one place.
 
-Pour les étudiants des instituts préparatoires (IPEI, filières **MP**, **PC**, **T** et **BG**)
-qui visent les concours nationaux d'entrée aux écoles d'ingénieurs.
-
-- **Programme officiel** — chapitre par chapitre, avec le suivi de sa progression.
-- **Annales des concours nationaux** — les sujets des sessions passées, classés.
-- **Bibliothèque de documents** — cours, séries et corrigés.
-- **Communauté et orientation** — l'entraide entre étudiants, et le choix des écoles.
-
-### [myprepa.org](https://myprepa.org) — les cours en vidéo
-
-Des cours en vidéo, organisés en séances, à suivre en ligne.
-
----
-
-## Ce qui est public ici
-
-Le code des plateformes est privé. Ce qui est ouvert :
-
-| Dépôt | Rôle |
+| | |
 |---|---|
-| [`myprepa-status`](https://github.com/myprepa/myprepa-status) | Surveillance de disponibilité et page [status.myprepa.tn](https://status.myprepa.tn), propulsées par [Upptime](https://upptime.js.org). |
-| [`.github`](https://github.com/myprepa/.github) | Ce profil et les fichiers communs à l'organisation. |
+| **Official programmes** | Every subject, chapter by chapter, reconstructed from the published texts — with personal progress tracking. |
+| **Past exams** | National competitive-exam papers, organised by stream, subject and year. |
+| **Document library** | Courses, problem sets and solutions, protected and searchable. |
+| **Community & orientation** | Cohorts, peer help, and guidance on choosing an engineering school. |
+| **AI-assisted learning** *(in progress)* | A retrieval-augmented assistant grounded in our curated dataset, and personal tutor agents. |
 
-## Nous contacter
+**Where we are:** live in Tunisia for preparatory-class students (MP, PC, T, BG) at [myprepa.tn](https://myprepa.tn),
+with video courses at [myprepa.org](https://myprepa.org). France and Morocco are next.
 
-- Écrire : **contact@myprepa.tn**
-- Suivre : [facebook.com/myprepa.tn](https://www.facebook.com/myprepa.tn)
-- Signaler une faille de sécurité : voir notre [politique de sécurité](https://github.com/myprepa/.github/blob/main/SECURITY.md)
+## How it is built
+
+- **Platform** — a single Next.js application serving the student site and our internal consoles.
+- **Data pipeline** — crawls official sources, extracts facts with provenance and reconciles them into a canonical
+  dataset (bronze → silver → gold) that feeds the platform and, soon, the AI assistant.
+- **Operations** — CI-built, human-approved deploys; monitoring at [status.myprepa.tn](https://status.myprepa.tn);
+  AI agents that assist the team under explicit human approval.
+
+Our product code is private. Public repositories:
+
+| Repository | Purpose |
+|---|---|
+| [`myprepa-status`](https://github.com/myprepa/myprepa-status) | Uptime monitoring and the public status page. |
+| [`.github`](https://github.com/myprepa/.github) | This profile and organisation-wide community files. |
+
+## Contact
+
+- **Email:** contact@myprepa.tn
+- **Facebook:** [facebook.com/myprepa.tn](https://www.facebook.com/myprepa.tn)
+- **Security issues:** please follow our [security policy](https://github.com/myprepa/.github/blob/main/SECURITY.md).
