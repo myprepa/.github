@@ -1,0 +1,10 @@
+# Org-wide default issue forms. A repository with its own .github/ISSUE_TEMPLATE
+# folder uses its own forms instead of these.
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability
+    url: https://github.com/myprepa/.github/blob/main/SECURITY.md
+    about: Please do not open a public issue for security problems.
+  - name: Account, billing or access question
+    url: mailto:support@myprepa.tn
+    about: For students and parents. The support team answers by email.

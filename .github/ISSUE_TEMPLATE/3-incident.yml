@@ -1,0 +1,47 @@
+name: Incident
+description: Production is degraded or down, or money or data is at risk right now.
+type: Incident
+labels: ["priority:p0"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fix first, write later: open this, post the link to the team, then act. Keep a timeline in the comments (UTC).
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who is affected, since when (UTC), and what they cannot do.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "SEV1: site down, payments or login broken, data loss"
+        - "SEV2: a main flow broken or badly degraded"
+        - "SEV3: partial or limited degradation"
+    validations:
+      required: true
+  - type: textarea
+    id: detection
+    attributes:
+      label: How it was detected
+      description: Alert, user report, monitor, KPI. Link it.
+  - type: textarea
+    id: actions
+    attributes:
+      label: Actions taken so far
+      value: |
+        - HH:MM UTC
+  - type: input
+    id: deploy
+    attributes:
+      label: Last deploy before the incident
+      description: Release tag (deploy-YYYYMMDD-HHMM) or run link, if any.
+  - type: textarea
+    id: followups
+    attributes:
+      label: Follow-ups (after resolution)
+      description: Root cause, the guard or test that would have caught it, and one issue per follow-up.

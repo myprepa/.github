@@ -1,0 +1,53 @@
+name: Bug
+description: Something that worked, or should work, does not.
+type: Bug
+labels: []
+body:
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: URL or screen, and the account type (student, admin, anonymous). No passwords or personal data.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "P0: money, auth, data loss or site down (open an Incident instead if it is happening now)"
+        - "P1: a main flow is broken for some users"
+        - "P2: degraded or cosmetic"
+        - "P3: minor"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [web, admin, ops, agents, docs, crawler, infra, data, auth, payments, support]
+  - type: input
+    id: kpi
+    attributes:
+      label: KPI affected (if known)
+      description: "e.g. `reliability.sentry_new_issues_24h`, `product.signups_24h`."
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Error tracker link, screenshot, console output. Remove tokens and personal data first.

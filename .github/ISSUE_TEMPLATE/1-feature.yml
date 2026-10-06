@@ -1,0 +1,84 @@
+name: Feature
+description: Something new or better for users, admins or the team.
+type: Feature
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One outcome per issue. If you cannot say which number this moves, it is probably a Task or a Chore.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: Who is blocked or what is missed today? Facts and numbers over opinions.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What is true once this ships? Describe the behaviour, not the implementation.
+    validations:
+      required: true
+  - type: dropdown
+    id: kpi_domain
+    attributes:
+      label: Which KPI does this move?
+      description: The KPI catalogue domain. Pick "none" only for enabling work, and say why below.
+      options:
+        - PRODUCT
+        - RELIABILITY
+        - INFRA
+        - DELIVERY
+        - ENGINEERING
+        - TRAFFIC
+        - EMAIL
+        - AGENTS
+        - COST
+        - SEARCH
+        - CONTENT
+        - CRAWLER
+        - SUPPORT
+        - AI
+        - SECURITY
+        - none
+    validations:
+      required: true
+  - type: input
+    id: target_kpi
+    attributes:
+      label: Target KPI
+      description: "Catalogue key, current value and target, e.g. `product.signup_unverified_7d: 17.2 % → < 10 %`."
+      placeholder: "<kpi key>: <now> → <target>"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [web, admin, ops, agents, docs, crawler, infra, data, auth, payments, support]
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "P0: money, auth, data loss or site down"
+        - "P1: this week"
+        - "P2: this iteration"
+        - "P3: when convenient"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance checks
+      description: How we will know it works, including how the KPI is read after the deploy.
+      value: |
+        - [ ]
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes, links, screenshots

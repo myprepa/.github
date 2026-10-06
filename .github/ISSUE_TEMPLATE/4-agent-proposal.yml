@@ -1,0 +1,66 @@
+name: Agent proposal
+description: Work proposed by an AI agent. Nothing starts until a human adds agent:approved.
+type: Agent proposal
+labels: ["agent:proposal"]
+body:
+  - type: input
+    id: agent
+    attributes:
+      label: Agent
+      description: The agent card id in myprepa/agents (agents/<id>.md), e.g. triage, kpi-analyst.
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: What the agent observed, with evidence (file:line, query, KPI value and its timestamp).
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What it would do, in which repository, and what it would NOT touch.
+    validations:
+      required: true
+  - type: dropdown
+    id: kpi_domain
+    attributes:
+      label: Which KPI does this move?
+      options: [PRODUCT, RELIABILITY, INFRA, DELIVERY, ENGINEERING, TRAFFIC, EMAIL, AGENTS, COST, SEARCH, CONTENT, CRAWLER, SUPPORT, AI, SECURITY, none]
+    validations:
+      required: true
+  - type: input
+    id: target_kpi
+    attributes:
+      label: Target KPI
+      placeholder: "<kpi key>: <now> → <target>"
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options:
+        - "Low: docs, tests, read-only"
+        - "Medium: app code behind the gates"
+        - "High: data, money, auth, deploy or infra (owner must approve explicitly)"
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback
+      description: How to undo it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Agent rules
+      options:
+        - label: No production write, no deploy, no secret is involved without the owner's explicit go.
+          required: true
+        - label: Gates run locally before any push; one push per wave.
+          required: true
